@@ -1,0 +1,52 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use App\Contracts\Repository\Repository;
+use Illuminate\Database\Eloquent\Model;
+
+class $CLASS$ implements Repository
+{
+    /**
+     * @inheritDoc
+     */
+    public function create(mixed $data)
+    {
+        // Implementation for creating an asset
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function read(Model|int $model)
+    {
+        // Implementation for reading an asset by ID
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function readAll(): iterable
+    {
+        return []; // Assuming this returns an iterable collection of all assets
+        // Implementation for retrieving all assets
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function update(Model|int $model, mixed $data = null): Model
+    {
+        // Implementation for updating an asset by ID
+        return $model; // Assuming the model is updated and returned
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function delete(Model|int $id): bool
+    {
+        // Implementation for deleting an asset by ID
+        return true; // Assuming deletion is successful
+    }
+}
