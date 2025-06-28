@@ -1,0 +1,30 @@
+{
+    "name": "abdalrhman/orders",
+    "description": "",
+    "authors": [
+        {
+            "name": "Abdalrhman Emad Saad",
+            "email": "abdalrhman@darauction.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Orders\\": "src/",
+            "Modules\\Orders\\Database\\Factories\\": "database/factories/",
+            "Modules\\Orders\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Orders\\Tests\\": "tests/"
+        }
+    }
+}
