@@ -1,3 +1,7 @@
 {
-    "Users": true
+    "Users": true,
+    "Products": true,
+    "Categories": true,
+    "Carts": true,
+    "Orders": true
 }
