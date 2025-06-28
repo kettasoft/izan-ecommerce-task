@@ -14,6 +14,7 @@ class LogoutController extends Controller
     public function __invoke(Request $request)
     {
         $request->user()->tokens()->delete();
+        auth()->logout();
 
         // Return a successful response
         return $this->sendSuccess('Logged out successfully', 200);
