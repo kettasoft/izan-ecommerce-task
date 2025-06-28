@@ -1,0 +1,30 @@
+{
+    "name": "abdalrhman/carts",
+    "description": "",
+    "authors": [
+        {
+            "name": "Abdalrhman Emad Saad",
+            "email": "abdalrhman@darauction.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Carts\\": "src/",
+            "Modules\\Carts\\Database\\Factories\\": "database/factories/",
+            "Modules\\Carts\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Carts\\Tests\\": "tests/"
+        }
+    }
+}
