@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Modules\Users\Models\User;
 use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Users\Http\Requests\LoginRequest;
@@ -48,7 +49,8 @@ class LoginController extends Controller
             $this->sendError('Password or username is incorrect.', code: Response::HTTP_NOT_FOUND);
         }
 
-        event(new Login('sanctum', $user, false));
+        Auth::login($user);
+        $request->session()->regenerate();
 
         $user->last_login_at = Carbon::now()->toDateTimeString();
 
