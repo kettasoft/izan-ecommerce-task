@@ -2,7 +2,6 @@
 
 namespace Modules\Users\Tests\Feature;
 
-use Laravel\Sanctum\Sanctum;
 use Modules\Users\Models\Customer;
 use Modules\Users\Models\User;
 use Tests\TestCase;
@@ -22,7 +21,7 @@ class LogoutTest extends TestCase
         $user = Customer::factory()->create();
 
         // Simulate a user login
-        Sanctum::actingAs($user);
+        $this->actingAs($user);
 
         // Perform the logout action
         $response = $this->post(route('api.logout'));
